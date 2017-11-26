@@ -58,5 +58,69 @@ public class Algorithms {
 		return false;
 		
 	}
+	
+	public static List<Double> sortScores(List<Double> sorted) {
+
+		
+		for (int i = 0; i < sorted.size(); i++) {
+
+			for (int j = 0; j < sorted.size()-1; j++) {
+				
+				double one = sorted.get(j);
+				double two = sorted.get(j + 1);
+				
+				if(two < one) {
+					sorted.set(j, two);
+					sorted.set((j+1), one);
+				}else if(one < two) {
+		
+			}				
+			}	
+		}
+	return sorted;
+	}
+	
+	public static List<String> sortDNA(List<String> sorting){
+		
+		for (int i = 0; i < sorting.size(); i++) {
+			
+			for (int j = 0; j < sorting.size() - 1; j++) {
+				
+				String first = sorting.get(j);
+				String second = sorting.get(j + 1);
+				if(first.length() > second.length()) {
+					sorting.set(j, second);
+					sorting.set(j + 1, first);
+				}else if(first.length() < second.length()) {
+					
+				}
+				
+			}
+			
+		}
+		return sorting;
+	}
+	
+	public static List<String> sortWords(List<String> sort){
+		
+		for (int i = 0; i < sort.size(); i++) {
+			
+			for (int j = 0; j < sort.size()-1; j++) {
+				
+				String firstnumber = sort.get(j);
+				String secondnumber = sort.get(j+1);
+			
+			if(firstnumber.compareTo(secondnumber) > 0) {
+				sort.set(j, secondnumber);
+				sort.set(j+1, firstnumber);
+			}else if(firstnumber.compareTo(secondnumber) < 0) {
+				
+			}
+				
+			}
+			
+		}
+		return sort;
+	}
 	// Add other methods here
 }
